@@ -6,7 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-{{--    <link rel="stylesheet" href="{{ asset('../resources/sass/app.css') }}">--}}
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    {{--    <link rel="stylesheet" href="{{ asset('../resources/sass/app.css') }}">--}}
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/sass/app.scss'])
     <title>@yield('title')</title>
 </head>

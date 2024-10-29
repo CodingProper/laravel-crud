@@ -20,6 +20,17 @@
             <td>Mark</td>
             <td>Otto</td>
             <td>@mdo</td>
+            <td>
+                <a href="#" class="btn btn-success">
+                    <i class="fa-solid fa-face-laugh-beam">input</i>
+                </a>
+                <a href="#" class="btn btn-primary">
+                    <i class="fa-solid fa-pen-to-square">edit</i>
+                </a>
+                <a href="#" class="btn btn-danger">
+                    <i class="fa fa-trash">delete</i>
+                </a>
+            </td>
         </tr>
 
         </tbody>
