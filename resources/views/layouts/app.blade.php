@@ -6,12 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-{{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
+{{--    <link rel="stylesheet" href="{{ asset('../resources/sass/app.css') }}">--}}
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/sass/app.scss'])
     <title>@yield('title')</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success mb-3">
+    <div class="container">
+
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +25,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{{route('posts.index')}}">Posts</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,13 +48,13 @@
             </form>
         </div>
     </div>
+    </div>
 </nav>
 
     <div class="container">
         @yield('content')
 
     </div>
-@vite(['resources/js/app.js'])
-    <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>
