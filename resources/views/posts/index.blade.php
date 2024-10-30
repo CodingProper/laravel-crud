@@ -20,16 +20,17 @@
             <td>Mark</td>
             <td>Otto</td>
             <td>@mdo</td>
-            <td>
+            <td class="table-buttons">
                 <a href="#" class="btn btn-success">
                     <i class="fa-solid fa-face-laugh-beam">input</i>
                 </a>
                 <a href="#" class="btn btn-primary">
                     <i class="fa-solid fa-pen-to-square">edit</i>
                 </a>
-                <a href="#" class="btn btn-danger">
+                <form method="POST" action=""></form>
+                <button type="submit" href="#" class="btn btn-danger">
                     <i class="fa fa-trash">delete</i>
-                </a>
+                </button>
             </td>
         </tr>
 
