@@ -4,7 +4,9 @@
 @section('title', 'Page Title')
 
 @section('content')
-    <table class="table table-striped">
+    <a href="{{route('posts.create')}}" class="btn btn-success">Создать пост</a>
+
+    <table class="table table-striped mt-3" >
         <thead>
         <tr>
             <th scope="col">#</th>
@@ -15,16 +17,17 @@
         </tr>
         </thead>
         <tbody>
+        @foreach($posts as $post)
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row">{{$post->id}}</th>
+            <td>{{$post->title}}</td>
+            <td>{{$post->description}}</td>
+            <td>{{$post->price}}</td>
             <td class="table-buttons">
-                <a href="#" class="btn btn-success">
+                <a href="{{route('posts.show', $post)}}" class="btn btn-success">
                     <i class="fa-solid fa-face-laugh-beam">input</i>
                 </a>
-                <a href="#" class="btn btn-primary">
+                <a href="{{route('posts.edit', $post)}}" class="btn btn-primary">
                     <i class="fa-solid fa-pen-to-square">edit</i>
                 </a>
                 <form method="POST" action=""></form>
@@ -33,7 +36,7 @@
                 </button>
             </td>
         </tr>
-
+        @endforeach
         </tbody>
     </table>
 @endsection
