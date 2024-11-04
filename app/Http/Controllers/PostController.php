@@ -31,7 +31,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title'=>'required|max:255',
+            'description'=>'required|max:255',
+            'price'=>'required|max:255'
+        ]);
+
+        $post = new Post([
+            'title' => $request->get('title'),
+            'description' => $request->get('description'),
+            'price' => $request->get('price'),
+        ]);
+        $post->save();
+        return redirect('/posts')->with('success', 'Пост успешно добавлен!');
+
     }
 
     /**

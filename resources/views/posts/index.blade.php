@@ -6,7 +6,14 @@
 @section('content')
     <a href="{{route('posts.create')}}" class="btn btn-success">Создать пост</a>
 
+    @if(session()->get('success'))
+        <div class="alert alert-success mt-3" >
+            {{ session()->get('success') }}
+        </div>
+    @endif
+
     <table class="table table-striped mt-3" >
+
         <thead>
         <tr>
             <th scope="col">#</th>
@@ -31,6 +38,8 @@
                     <i class="fa-solid fa-pen-to-square">edit</i>
                 </a>
                 <form method="POST" action=""></form>
+                @csrf
+                @method('DELETE')
                 <button type="submit" href="#" class="btn btn-danger">
                     <i class="fa fa-trash">delete</i>
                 </button>
