@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
-
 class PostController extends Controller
 {
     /**
@@ -74,8 +73,10 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        $post = Post::all()->find($id);
+        $post->delete();
+        return redirect('/posts')->with('success', 'пост удален');
     }
 }

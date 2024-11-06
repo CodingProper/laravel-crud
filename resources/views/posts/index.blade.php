@@ -37,12 +37,13 @@
                 <a href="{{route('posts.edit', $post)}}" class="btn btn-primary">
                     <i class="fa-solid fa-pen-to-square">edit</i>
                 </a>
-                <form method="POST" action=""></form>
+                <form method="post" action="{{route('posts.destroy', $post->id)}}">
                 @csrf
                 @method('DELETE')
-                <button type="submit" href="#" class="btn btn-danger">
+                <button type="submit" class="btn btn-danger">
                     <i class="fa fa-trash">delete</i>
                 </button>
+                </form>
             </td>
         </tr>
         @endforeach
