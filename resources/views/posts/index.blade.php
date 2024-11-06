@@ -32,7 +32,7 @@
             <td>{{$post->price}}</td>
             <td class="table-buttons">
                 <a href="{{route('posts.show', $post)}}" class="btn btn-success">
-                    <i class="fa-solid fa-face-laugh-beam">input</i>
+                    <i class="fa-solid fa-face-laugh-beam">view</i>
                 </a>
                 <a href="{{route('posts.edit', $post)}}" class="btn btn-primary">
                     <i class="fa-solid fa-pen-to-square">edit</i>

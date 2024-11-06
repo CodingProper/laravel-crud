@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('posts', PostController::class)->withTrashed();
+Route::resource('posts', PostController::class);
