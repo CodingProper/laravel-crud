@@ -22,17 +22,17 @@
                 @method('PATCH')
                 <div class="form-group">
                     <label for="post-title">Название</label>
-                    <input type="text" name="title" value="{{old('title')}}" class="form-control" id="post-title">
+                    <input type="text" name="title" value="{{$post->title}}" class="form-control" id="post-title">
                 </div>
 
                 <div class="form-group">
                     <label for="post-description">Описание</label>
-                    <textarea class="form-control" name="description" id="post-description" rows="3">{{old('description')}}</textarea>
+                    <textarea class="form-control" name="description" id="post-description" rows="3">{{$post->description}}</textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="post-price">Цена</label>
-                    <input type="text"  class="form-control" name="price" value="{{old('price')}}" id="post-price" >
+                    <input type="text"  class="form-control" name="price" value="{{$post->price}}" id="post-price" >
                 </div>
                 <button type="submit" class="btn btn-success">Отредактировать пост</button>
             </form>
